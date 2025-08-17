@@ -43,3 +43,30 @@ CREATE DATABASE food_ordering;
 
 # 5. Run the app
 python app.py
+
+---
+
+## 📌 API Endpoints
+
+### 👤 Users
+- `POST /users` → Register new user  
+- `GET /users/<id>` → Fetch user details  
+
+### 🍔 Menu
+- `POST /menu` → Add new food item  
+- `GET /menu` → Get all menu items  
+
+### 🛒 Orders
+- `POST /orders` → Place an order  
+- `GET /orders/<id>` → Get order details  
+
+---
+
+## 🐳 Docker Deployment
+
+```bash
+# Build Docker image
+docker build -t food-ordering-api .
+
+# Run container
+docker run -p 5000:5000 food-ordering-api
